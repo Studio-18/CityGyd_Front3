@@ -206,19 +206,19 @@ select.filter-result {
 
 @media (max-width: 768px) {
   /* line 92, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-  .explore-tours .title {
+  .title {
     margin-top: 60px;
   }
   /* line 97, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-  .explore-tours .tours-list .tour-sub-title {
+  .tours-list .tour-sub-title {
     text-align: center;
   }
   /* line 101, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-  .explore-tours .tours-list .tour-card {
+  .tours-list .tour-card {
     text-align: center;
   }
   /* line 104, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-  .explore-tours .tours-list .tour-card .image-block img {
+  .tours-list .tour-card .image-block img {
     display: block;
     margin: 0 auto;
   }
