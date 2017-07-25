@@ -4,7 +4,7 @@
     return {
       templateUrl: 'core/directives/footer/footer.html',
       scope: {
-        gide: '='
+
       },
       link: function (scope) {}
     };

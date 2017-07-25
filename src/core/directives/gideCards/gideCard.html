@@ -3,9 +3,10 @@
       {{gide.user.firstName}} {{gide.user.lastName}}
 
     </span>
-  <span class="expertise" ng-repeat="(key,value) in gide.expertise">
-      {{ key }} </span>
+  <!-- <span class="expertise" ng-repeat="(key,value) in gide.expertise">
+      {{ key }} </span> -->
+      <span class="expertise">{{gide.expertise}}</span>
   <br>
   <!-- <span ng-repeat="(key, value) in gide.languages"> {{key}} </span> -->
-  <!-- <span class="language">English, Japanese, Korean </span> -->
+  <span class="language">{{  gide.languages}} </span>
 </div>

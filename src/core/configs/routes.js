@@ -6,7 +6,7 @@
     $stateProvider.state('app', {
       url: '^',
       abstract: true,
-      templateUrl: 'templates/nav.html',
+      templateUrl: 'templates/home.html',
       controller: 'static.controller',
       controllerAs: 'static'
     }).state('app.explore-tours', {
