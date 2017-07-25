@@ -45,3 +45,16 @@ body {
   text-align: center;
   margin-bottom: 100px;
 }
+.image-block{
+  img{
+    max-width: 100%;
+  }
+}
+.tour-card{
+  min-height: 410px;
+}
+select{
+  &.filter-result{
+    margin-bottom: 20px;
+  }
+}

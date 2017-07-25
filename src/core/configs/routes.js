@@ -10,7 +10,7 @@
       controller: 'static.controller',
       controllerAs: 'static'
     }).state('app.explore-tours', {
-      url: '/explore-tours',
+      url: '/home',
       templateUrl: 'views/main/explore/tours.html',
       controller: 'Explore.controller',
       controllerAs: 'explore'
@@ -45,6 +45,7 @@
       templateUrl: 'views/main/viewtourgide/tourgide.html',
       controller: 'tourgideController',
       controllerAs: 'tourgide',
+
       params: {
         referer: null
       },
@@ -54,12 +55,23 @@
       templateUrl: '/views/main/viewtourgide/tour.html',
       controller: 'tourgideController',
       controllerAs: 'tourgide',
+      activeTab: 'tours',
+      params: {
+        referer: null
+      },
+    }).state('app.tourgide.gides', {
+       url: '/gides',
+      // abstract: true,
+      templateUrl: '/views/main/viewtourgide/gide.html',
+      controller: 'tourgideController',
+      controllerAs: 'tourgide',
+      activeTab: 'gides',
       params: {
         referer: null
       },
     });
     $locationProvider.html5Mode(false);
     $locationProvider.hashPrefix('');
-    // $urlRouterProvider.otherwise('explore-tours');
+    $urlRouterProvider.otherwise('home');
   }
 })();

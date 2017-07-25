@@ -2,14 +2,15 @@
   'use strict'
   //TODO:
   var ExploreController;
-  ExploreController.$inject = ['$state', '$scope', '$http', 'exploreService', 'LANGUAGE'];
+  ExploreController.$inject = ['$state', '$scope', '$http', 'exploreService', 'LANGUAGE', 'loaderService'];
 
-  function ExploreController($state, $scope, $http, exploreService, LANGUAGE) {
+  function ExploreController($state, $scope, $http, exploreService, LANGUAGE, loaderService) {
     var vm = this;
     // console.log("CONST LANG", LANGUAGE);
     vm.tourData = {};
     vm.gideData = {};
     // console.log("eplore control");
+    loaderService.showLoader();
     vm.getTours = function () {
       exploreService.getTours().then(function (response) {
         if (response) {
@@ -20,7 +21,7 @@
             vm.tourData[i].ratings = 3;
             vm.tourData[i].reviewNumbers = 83;
           }
-
+          loaderService.hideLoader();
           $scope.slickConfig = {
             enabled: true,
             autoplay: false,
@@ -64,6 +65,7 @@
         if (response) {
           var data = response.data.data.gides;
           // console.log("Gide response Recd", response);
+          loaderService.hideLoader();
           vm.gideData = data;
           vm.gideData.ratings = 5;
           var languages = [];
@@ -71,7 +73,7 @@
             for (var key in data[i].languages) {
               console.log("key", key);
               for (var a in LANGUAGE) {
-//                console.log("a", a);
+                //                console.log("a", a);
                 if (a === key) {
                   // console.log("aa", a, key);
                   // console.log("aaaa", LANGUAGE[a]);
@@ -84,7 +86,7 @@
           // console.log("ddddd", vm.gideData);
         }
       });
-    }
+    };
     var init = function () {
       vm.getTours();
       vm.getGides();

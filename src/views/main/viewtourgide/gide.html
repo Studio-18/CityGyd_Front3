@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+<div class="row">
+  <div class="col-sm-2">
+    <select class="form-control filter-result" name="tourtype" ng-model="tourgide.tourtype">
+       <option ng-value="all" ng-selected>
+         All Gides
+       </option>
+
+    </select>
+
+  </div>
+
+</div>
+    <div class="row">
+      <div class="col-sm-3" ng-repeat="gide in tourgide.gideData">
+
+        <div class="explore-tours">
+          <gide-card gide="gide"></gide-card>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+<footer-tour></footer-tour>
+
+  </div>
+
+</div>

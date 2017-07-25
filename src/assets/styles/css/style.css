@@ -55,6 +55,21 @@ body {
   margin-bottom: 100px;
 }
 
+/* line 49, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_general.scss */
+.image-block img {
+  max-width: 100%;
+}
+
+/* line 53, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_general.scss */
+.tour-card {
+  min-height: 410px;
+}
+
+/* line 57, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_general.scss */
+select.filter-result {
+  margin-bottom: 20px;
+}
+
 /* line 1, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
 .navbar {
   height: 103px;
@@ -138,43 +153,44 @@ body {
 }
 
 /* line 11, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-sub-title {
+.explore-tours .tour-sub-title {
   color: #4A4A4A;
   font-size: 28px;
   margin-bottom: 40px;
 }
 
 /* line 17, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card {
+.explore-tours .tour-card {
   margin-bottom: 30px;
   cursor: pointer;
+  min-height: 410px;
 }
 
-/* line 21, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .ngrateit {
+/* line 22, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .ngrateit {
   display: inline-block;
 }
 
-/* line 25, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .reviews {
+/* line 26, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .reviews {
   display: inline-block;
   font-size: 12px;
 }
 
-/* line 30, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .language {
+/* line 31, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .language {
   display: block;
   font-size: 12px;
 }
 
-/* line 37, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .image-block.gide img {
+/* line 38, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .image-block.gide img {
   max-width: 100%;
   height: 200px;
 }
 
-/* line 46, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .tour-name {
+/* line 47, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .tour-name {
   font-weight: bold;
   color: #4A4A4A;
   display: block;
@@ -182,20 +198,20 @@ body {
   font-size: 15px;
 }
 
-/* line 54, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .tour-gide-name {
+/* line 55, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .tour-gide-name {
   display: block;
 }
 
-/* line 58, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-tours .tours-list .tour-card .guide-name {
+/* line 59, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-tours .tour-card .guide-name {
   color: #4A4A4A;
   display: block;
   padding: 10px 0 0;
   font-size: 15px;
 }
 
-/* line 68, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+/* line 69, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
 .explore-tours a.see-all {
   margin-top: 23px;
   display: block;
@@ -204,57 +220,58 @@ body {
   font-weight: normal;
 }
 
-/* line 75, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+/* line 76, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
 .explore-tours a.see-all img {
   height: 12px;
   width: 12px;
 }
 
-/* line 80, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+/* line 81, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
 .explore-tours a.see-all:active, .explore-tours a.see-all:focus, .explore-tours a.see-all:hover, .explore-tours a.see-all:visited {
   text-decoration: none;
 }
 
 @media (max-width: 768px) {
-  /* line 91, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+  /* line 92, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
   .explore-tours .title {
     margin-top: 60px;
   }
-  /* line 96, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+  /* line 97, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
   .explore-tours .tours-list .tour-sub-title {
     text-align: center;
   }
-  /* line 100, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+  /* line 101, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
   .explore-tours .tours-list .tour-card {
     text-align: center;
   }
-  /* line 103, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+  /* line 104, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
   .explore-tours .tours-list .tour-card .image-block img {
     display: block;
     margin: 0 auto;
   }
 }
 
-/* line 141, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+/* line 142, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
 .explore-citygyd {
   padding: 40px 0;
 }
 
-/* line 145, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+/* line 146, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
 .explore-citygyd ul.tabs-link li {
   position: relative;
   width: 124px;
 }
 
-/* line 148, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
-.explore-citygyd ul.tabs-link li a {
+/* line 149, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+.explore-citygyd ul.tabs-link li a, .explore-citygyd ul.tabs-link li span {
   color: #858080;
   font-size: 32px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* line 157, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
+/* line 159, /var/www/html/cityGydNewDesign/src/assets/styles/sass/tours.scss */
 .explore-citygyd ul.tabs-link li.active::after {
   content: '';
   position: absolute;
@@ -404,6 +421,30 @@ body {
     display: block;
     margin: 0 auto;
   }
+}
+
+/* line 1, /var/www/html/cityGydNewDesign/src/assets/styles/sass/loader.scss */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+}
+
+/* line 8, /var/www/html/cityGydNewDesign/src/assets/styles/sass/loader.scss */
+.loader-wrapper .image-block {
+  height: 500px;
+}
+
+/* line 10, /var/www/html/cityGydNewDesign/src/assets/styles/sass/loader.scss */
+.loader-wrapper .image-block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=maps/style.css.map */
