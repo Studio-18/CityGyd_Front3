@@ -7,7 +7,7 @@
     padding: 20px;
   }
 
-  .tours-list {
+
     .tour-sub-title {
       color: $light_black;
       font-size: 28px;
@@ -17,6 +17,7 @@
     .tour-card {
       margin-bottom: 30px;
       cursor: pointer;
+      min-height: 410px;
 
       .ngrateit {
         display: inline-block;
@@ -62,7 +63,7 @@
         font-size: 15px;
       }
     }
-  }
+
 
   a {
     &.see-all {
@@ -145,11 +146,12 @@
       li{
         position: relative;
         width: 124px;
-        a{
+        a, span{
           color: $gray-color;
           font-size: 32px;
           font-weight: 600;
           text-decoration: none;
+          cursor: pointer;
 
         }
 

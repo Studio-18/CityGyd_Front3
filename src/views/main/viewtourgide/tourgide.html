@@ -3,8 +3,9 @@
     <div class="col-md-12">
       <div class="explore-citygyd explore-tours">
         <ul class="list-inline tabs-link">
-          <li class="active"><a href="#">Tours</a></li>
-          <li><a href="#">Gyds</a></li>
+
+          <li ng-class="{active: $route.current.activeTab == 'tours'}" ui-sref="app.tourgide.tours"><span href="#">Tours</span></li>
+          <li ng-class="{active: $route.current.activeTab == 'gides'}" ui-sref="app.tourgide.gides"><span href="#">Gyds</span></li>
         </ul>
 
 

@@ -2,25 +2,25 @@
   'use strict'
   //TODO:
   var ExploreController;
-  ExploreController.$inject = ['$state', '$scope', '$http', 'exploreService', 'LANGUAGE'];
+  ExploreController.$inject = ['$state', '$scope', '$http', 'exploreService', 'LANGUAGE', 'loaderService', 'languagereadService', 'CATEGORY', 'expertiseNameService'];
 
-  function ExploreController($state, $scope, $http, exploreService, LANGUAGE) {
+  function ExploreController($state, $scope, $http, exploreService, LANGUAGE, loaderService, languagereadService, CATEGORY, expertiseNameService) {
     var vm = this;
-    // console.log("CONST LANG", LANGUAGE);
     vm.tourData = {};
     vm.gideData = {};
-    // console.log("eplore control");
+    loaderService.showLoader();
     vm.getTours = function () {
       exploreService.getTours().then(function (response) {
         if (response) {
-          console.log("Response Recd for explore service..", response);
           var data = response.data.data.tours;
           vm.tourData = data;
           for (var i = 0; i < vm.tourData.length; i++) {
             vm.tourData[i].ratings = 3;
             vm.tourData[i].reviewNumbers = 83;
+            var sentence = languagereadService.getLanguageName(LANGUAGE, vm.tourData[i].language);
+            vm.tourData[i].language = sentence;
           }
-
+          loaderService.hideLoader();
           $scope.slickConfig = {
             enabled: true,
             autoplay: false,
@@ -63,28 +63,20 @@
       exploreService.getGides().then(function (response) {
         if (response) {
           var data = response.data.data.gides;
-          // console.log("Gide response Recd", response);
+          loaderService.hideLoader();
           vm.gideData = data;
           vm.gideData.ratings = 5;
           var languages = [];
-          for (var i = 1; i < data.length; i++) {
-            for (var key in data[i].languages) {
-              console.log("key", key);
-              for (var a in LANGUAGE) {
-//                console.log("a", a);
-                if (a === key) {
-                  // console.log("aa", a, key);
-                  // console.log("aaaa", LANGUAGE[a]);
-                  languages.push(LANGUAGE[a]);
-                }
-              }
-            }
-            vm.gideData[i].languagesa = languages;
+          for (var i = 0; i < data.length; i++) {
+            var sentence = languagereadService.getLanguageName(LANGUAGE, vm.gideData[i].languages);
+            vm.gideData[i].languages = sentence;
+           var expertise = expertiseNameService.getExpertiseName(CATEGORY, vm.gideData[i].expertise);
+           vm.gideData[i].expertise = expertise;
+           console.log("final expertise list", vm.gideData[i].expertise);
           }
-          // console.log("ddddd", vm.gideData);
         }
       });
-    }
+    };
     var init = function () {
       vm.getTours();
       vm.getGides();
