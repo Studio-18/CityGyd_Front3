@@ -11,10 +11,10 @@
     console.log("gidename", vm.gidename);
     vm.gideData = {};
     console.log("Language", LANGUAGE);
-    vm.gideData = GIDE ? GIDE : {
-      expertise: [],
-      languages: {}
-    };
+    // vm.gideData = GIDE ? GIDE : {
+    //   expertise: [],
+    //   languages: {}
+    // };
     loaderService.showLoader();
     console.log("eplore control", vm.gideData);
     vm.getGideData = function (name, id) {
