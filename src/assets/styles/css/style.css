@@ -75,16 +75,17 @@ select.filter-result {
   height: 103px;
   border-radius: 0;
   background-color: #262626;
+  z-index: 9999;
 }
 
-/* line 7, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
+/* line 8, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
 .navbar .navbar-brand > img {
   display: block;
   height: 80px;
   width: auto;
 }
 
-/* line 17, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
+/* line 18, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
 .navbar.navbar-inverse .navbar-nav > li > a {
   color: #fff;
   font-weight: bold;
@@ -94,52 +95,24 @@ select.filter-result {
 
 @media (max-width: 992px) {
   /* line 30, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-header {
-    float: none;
-    margin-bottom: 20px;
-  }
-  /* line 34, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-left, .navbar-right {
-    float: none !important;
-  }
-  /* line 37, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-toggle {
-    display: block;
-  }
-  /* line 42, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-collapse.collapse {
-    display: none !important;
-  }
-  /* line 45, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-nav {
-    float: none !important;
-    margin-top: 7.5px;
-  }
-  /* line 49, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-nav > li {
-    float: none;
-  }
-  /* line 52, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  /* line 56, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
-  .collapse.in {
-    display: block !important;
-  }
-}
-
-@media (max-width: 992px) {
-  /* line 62, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
   .navbar-collapse {
     box-shadow: none;
-    border-width: 0px;
+    border-width: 0;
   }
-  /* line 68, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
+  /* line 37, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
   ul.nav.navbar-nav {
     background-color: #262626;
     margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 46, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_navbar.scss */
+  .navbar.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 0px;
   }
 }
 
