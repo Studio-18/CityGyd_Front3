@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="explore-tours">
+      <h1 class="center title">
+      Unique experiences of LA with those who know it best
+    </h1>
+      <div class="container">
+        <div class="tours-list">
+          <h3 class="tour-sub-title">One of a kind tours</h3>
+
+          <div class="row">
+
+            <slick settings="slickConfig" infinite=true>
+              <div class="col-sm-4" ng-repeat="tour in explore.tourData">
+
+                <tour-card tour="tour"></tour-card>
+
+              </div>
+            </slick>
+
+          </div>
+
+
+        </div>
+
+        <div class="tours-list">
+          <div class="row">
+            <div class="col-sm-8">
+              <h3 class="tour-sub-title">Meet your friendly local CityGyds</h3>
+
+            </div>
+            <div class="col-sm-4">
+              <a href="#" class="see-all">See all <img src="../../../assets/images/next.png" alt="" /></a>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+
+            <div class="col-sm-3" ng-repeat="gide in explore.gideData | limitTo:4">
+            
+              <gide-card gide="gide"></gide-card>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <h3 class="center title  ">
+    We Speak Your Language
+      </h3>
+
+        <div class="tours-list">
+          <h3 class="tour-sub-title">Art and Architecture Tours</h3>
+
+          <div class="row">
+
+            <div class="col-sm-3" ng-repeat="tour in explore.tourData | limitTo: 4">
+
+              <tour-card tour="tour"></tour-card>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="tours-list">
+          <h3 class="tour-sub-title">CityGyd MeetUps</h3>
+
+          <div class="row">
+
+            <div class="col-sm-3" ng-repeat="tour in explore.tourData | limitTo: 4">
+              <!-- <div class="tour-card">
+                <div class="image-block"> <img src="{{tour.image.url}}" alt="{{tour.description}}" height="290" width="194" /> </div> <span class="tour-name">{{tour.title}}</span> <span>with {{tour.gide.user.firstName}} {{tour.gide.user.lastName}}</span> </div> -->
+                <meetup-card tour="tour"></meetup-card>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <p class="join-meetup">
+          Join our regular meet ups
+        </p>
+        <p class="meetup">
+          meetup
+        </p>
+        <p class="facebook">
+          <a href="#"><img src="../../../assets/images/facebook-app-logo.png" alt="" /></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

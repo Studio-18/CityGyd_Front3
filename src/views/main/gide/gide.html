@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="gide-details">
+      <div class="col-sm-6 col-md-4">
+        <div class="image-block">
+          <img src="{{gide.gideData.user.image.url}}" alt="{{gide.gideData.gidename}}" class="img img-responsive" />
+
+        </div>
+        <div class="">
+          <a href="#" class="contact btn btn-default">Contact {{gide.gideData.user.firstName}}</a>
+
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-8">
+        <h3 class="gide-name"> {{gide.gideData.user.firstName}} {{gide.gideData.user.lastName}} </h3>
+        <p class="gide-desc">
+          {{gide.gideData.languages.en}}
+        </p>
+        <p class="gide-info">
+          <span class="language-details">I speak:  </span>
+          <span class="interests-details">My interests are: </span>
+          <span class="avail-dtails">I am generaly available: </span>
+        </p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="border-div"></div>
+      <div class="tours">
+        <h3 class="tour-title">Check out my tours</h3>
+
+        <div class="tour-details" ng-repeat="tour in gide.gideData.tours">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="image-block">
+                <img src="{{tour.image.url}}" alt="" class="img img-responsive" />
+
+              </div>
+
+            </div>
+            <div class="col-sm-5">
+              <h4 class="tour-name">{{tour.title}}</h4>
+              <p class="tour-desc">
+                {{tour.description | limitTo: 100}}{{tour.description.length > 20 ? '...' : ''}}
+
+
+              </p>
+              <span class="price"> $ {{ tour.price}}  /  1 Hours </span>
+
+            </div>
+            <div class="col-sm-4">
+              <a href="#" class="btn btn-default learn-more">Learn More </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="join-meetup">
+        Join our regular meet ups
+      </p>
+      <p class="meetup">
+        meetup
+      </p>
+      <p class="facebook">
+        <a href="#"><img src="../../../assets/images/facebook-app-logo.png" alt="" /></a>
+      </p>
+
+    </div>
+
+  </div>
+
+
+</div>

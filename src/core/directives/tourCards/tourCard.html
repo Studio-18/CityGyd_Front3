@@ -1,0 +1,7 @@
+<div class="tour-card" >
+  <div class="image-block"> <img src="{{tour.image.url}}" alt="{{tour.description}}" height="290" width="194" /> </div> <span class="tour-name">{{tour.title}}</span> <span class="tour-gide-name">with {{tour.gide.user.firstName}} {{tour.gide.user.lastName}}</span>
+
+  <ng-rate-it ng-model="tour.ratings" read-only="true"></ng-rate-it>
+  <span class="reviews">{{tour.reviewNumbers }} reviews </span>
+  <span class="language">English </span>
+</div>

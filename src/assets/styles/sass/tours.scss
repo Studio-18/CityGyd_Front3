@@ -1,0 +1,176 @@
+.explore-tours {
+  .title {
+    font-size: 48px;
+    color: #858080;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  .tours-list {
+    .tour-sub-title {
+      color: $light_black;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .tour-card {
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      .ngrateit {
+        display: inline-block;
+      }
+
+      .reviews {
+        display: inline-block;
+        font-size: 12px;
+      }
+
+      .language {
+        display: block;
+        font-size: 12px;
+      }
+
+      .image-block {
+        &.gide {
+          img {
+            max-width: 100%;
+            height: 200px;
+          }
+        }
+
+        img {}
+      }
+
+      .tour-name {
+        font-weight: bold;
+        color: $light_black;
+        display: block;
+        padding: 10px 0 0;
+        font-size: 15px;
+      }
+
+      .tour-gide-name {
+        display: block;
+      }
+
+      .guide-name {
+        color: $light_black;
+        display: block;
+        padding: 10px 0 0;
+        font-size: 15px;
+      }
+    }
+  }
+
+  a {
+    &.see-all {
+      margin-top: 23px;
+      display: block;
+      float: right;
+      color: $theme_black;
+      font-weight: normal;
+
+      img {
+        height: 12px;
+        width: 12px;
+      }
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+}
+@media (max-width:768px) {
+  .explore-tours {
+    .title {
+      margin-top: 60px;
+    }
+
+    .tours-list {
+      .tour-sub-title {
+        text-align: center;
+      }
+
+      .tour-card {
+        text-align: center;
+        .image-block{
+          img{
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .ngrateit {}
+
+        .reviews {}
+
+        .language {}
+
+        .image-block {
+          &.gide {}
+
+          img {}
+        }
+
+        .tour-name {}
+
+        .tour-gide-name {}
+
+        .guide-name {}
+      }
+    }
+
+    a {
+      &.see-all {
+        img {}
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {}
+      }
+    }
+  }
+}
+
+.explore-citygyd{
+  padding: 40px 0;
+  ul{
+    &.tabs-link{
+      li{
+        position: relative;
+        width: 124px;
+        a{
+          color: $gray-color;
+          font-size: 32px;
+          font-weight: 600;
+          text-decoration: none;
+
+        }
+
+        &.active{
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            bottom: -10px;
+            left: 0px;
+
+            background-color: $theme_blue;
+
+
+          }
+
+
+        }
+      }
+
+    }
+  }
+}

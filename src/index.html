@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> Citygyd Home Page </title>
+  <!-- build:css lib/allbootstrap.css -->
+  <link rel="stylesheet" href="lib/angular-bootstrap/ui-bootstrap-csp.css" media="screen" title="no title">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title">
+  <!--endbuild-->
+  <!-- build:css assets/styles/css/style.css  -->
+  <link rel="stylesheet" href="assets/styles/css/style.css" media="screen" title="no title">
+  <!--endbuild-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="lib/slick-carousel//slick/slick.css">
+  <link rel="stylesheet" href="lib/slick-carousel/slick/slick-theme.css">
+	  <link rel="stylesheet" href="lib/angular-rateit/dist/ng-rateit.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"></head>
+
+<body ng-app="Citygyd">
+  <ui-view></ui-view>
+
+  <!-- build:js lib/angularcombined.js -->
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/oclazyload/dist/ocLazyLoad.min.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+
+  <script src="lib/slick-carousel/slick/slick.js"></script>
+  <script src="lib/angular-slick-carousel/dist/angular-slick.min.js"></script>
+	<script src="lib/angular-rateit/dist/ng-rateit.min.js"></script>
+
+  <!-- endbuild -->
+  <!--build:js js/bundle.min.js  -->
+  <script src="core/modules/app.modules.js"></script>
+  <script src="core/modules/app.controllers.js"></script>
+  <script src="core/modules/app.configs.js"></script>
+  <script src="core/configs/routes.js"></script>
+  <script src="core/modules/app.directives.js"></script>
+  <script src="core/modules/app.services.js"></script>
+  <script src="core/modules/app.filters.js"></script>
+  <script src="core/modules/app.constants.js"></script>
+  <!-- endbuild -->
+
+  <!--Controllers  -->
+  <script src="core/controllers/static.controller.js"></script>
+  <script src="core/controllers/testController.js"></script>
+  <script src="views/main/explore/explore.controller.js"></script>
+	<script src="views/main/gide/gide.controller.js"></script>
+
+
+  <!-- Services -->
+  <script src="core/services/urlFactory.js"></script>
+  <script src="core/services/tour.service.js"></script>
+  <script src="core/services/explore.service.js"></script>
+	<script src="core/services/gide.service.js"></script>
+
+	<!--  Directives -->
+	<script src="core/directives/tourCards/tourCard.directive.js"></script>
+	<script src="core/directives/meetUpCards/meetUpCard.directive.js"></script>
+	<script src="core/directives/gideCards//gideCard.directive.js"></script>
+
+
+  <!-- constants -->
+  <script src="core/constants/app.constants.js"></script>
+	<script src="views/main/viewtourgide/tourgideController.js"></script>
+</body>
+
+</html>

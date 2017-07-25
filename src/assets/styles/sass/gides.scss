@@ -1,0 +1,157 @@
+.gide-details{
+  padding: 50px 0;
+  .contact {
+    &.btn{
+      background-color:  $theme_blue;
+      color: $pure_white;
+      text-transform: capitalize;
+      border-radius: 8px;
+      width: 330px;
+      height: 80px;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 22px;
+      margin: 40px 20px;
+      display: block;
+      text-align: center;
+
+    }
+
+  }
+  .gide-name{
+    color: $gray-color;
+    text-align: left;
+    font-weight: bold;
+    font-size: 42px;
+    text-transform: capitalize;
+
+
+  }
+  .gide-desc{
+    color: $pure_black;
+    font-size: 20px;
+    line-height: 35px;
+    display: block;
+    padding: 20px 0;
+
+  }
+  .gide-info{
+    span{
+      display: block;
+      color: $gray-color;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+
+}
+
+.tours{
+  padding: 30px 0;
+  .tour-title{
+    color: $gray-color;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .tour-details{
+    padding: 30px 0;
+    min-height: 200px;
+  }
+  .tour-name{
+    font-weight: bold;
+    font-size: 24px;
+    color: $pure_black;
+
+  }
+  .tour-desc{
+    color: $gray-color;
+    font-size: 20px;
+
+  }
+  .btn {
+    &.learn-more{
+      border: none;
+      color: $pure_white;
+      background-color: $theme_blue;
+      font-weight: bold;
+      font-size: 24px;
+      width: 220px;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      display: block;
+      margin-top: 30px;
+    }
+  }
+  .price{
+    color: $gray-color;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .gide-details{
+    text-align: center;
+    .image-block{
+      img{
+        display: block;
+        margin: 30px auto;
+      }
+    }
+    .contact {
+      &.btn{
+        text-align: center;
+        display: block;
+        margin: 30px auto;
+
+      }
+
+    }
+    .gide-name{
+text-align: center;
+    }
+    .gide-desc{
+
+    }
+    .gide-info{
+      span{
+      }
+    }
+
+
+  }
+
+  .tours{
+    text-align: center;
+    .tour-title{
+    }
+    .image-block{
+      text-align: center;
+      margin: 0 auto;
+      img{
+        margin: 0 auto;
+
+      }
+    }
+    .tour-details{
+    }
+    .tour-name{
+
+    }
+    .tour-desc{
+
+    }
+    .btn {
+      &.learn-more{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .price{
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div class="tour-card" ui-sref="app.gide({gidename: gide.gidename})">
+  <div class="image-block gide"> <img src="{{gide.user.image.url}}" alt="{{tour.description}}" /> </div> <span class="tour-name">
+      {{gide.user.firstName}} {{gide.user.lastName}}
+
+    </span>
+  <span class="expertise" ng-repeat="(key,value) in gide.expertise">
+      {{ key }} </span>
+  <br>
+  <!-- <span ng-repeat="(key, value) in gide.languages"> {{key}} </span> -->
+  <!-- <span class="language">English, Japanese, Korean </span> -->
+</div>
