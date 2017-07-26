@@ -1,17 +1,44 @@
 .gide-details{
   padding: 50px 0;
+  .image-block{
+    img{
+      &.img-circle{
+        height: 140px;
+        width: 140px;
+      }
+    }
+  }
+  .book-tour-title{
+    font-weight: 600;
+    font-size: 30px;
+    padding: 10px 0;
+    color: $gray-color;
+
+  }
+
+.contact-btn-block{
+  height: 220px;
+  .contact{
+    &.btn{
+      margin: 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
   .contact {
     &.btn{
       background-color:  $theme_blue;
       color: $pure_white;
       text-transform: capitalize;
       border-radius: 8px;
-      width: 330px;
-      height: 80px;
-      font-size: 30px;
+      width: 250px;
+      height: 70px;
+      font-size: 23px;
       font-weight: bold;
-      padding: 22px;
-      margin: 40px 20px;
+      padding: 20px 13px;
+      margin: 40px 0px;
       display: block;
       text-align: center;
 
@@ -21,7 +48,7 @@
   .gide-name{
     color: $gray-color;
     text-align: left;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 42px;
     text-transform: capitalize;
 
@@ -40,7 +67,8 @@
       display: block;
       color: $gray-color;
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 500;
+      line-height: 35px;
     }
   }
 
@@ -51,7 +79,7 @@
   padding: 30px 0;
   .tour-title{
     color: $gray-color;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 24px;
   }
   .tour-details{
@@ -99,6 +127,7 @@
       img{
         display: block;
         margin: 30px auto;
+
       }
     }
     .contact {
