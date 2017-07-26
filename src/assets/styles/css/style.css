@@ -561,20 +561,21 @@ select.filter-result {
 }
 
 /* line 94, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
-.signup-block .form-group span.terms {
+.signup-block .form-group span.terms, .signup-block .form-group label.terms {
   color: #858080;
   font-weight: 300;
   font-size: 18px;
   margin-left: 10px;
   display: inline-block;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 520px) {
-  /* line 107, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+  /* line 108, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
   .signup-block {
     padding: 80px 0;
   }
-  /* line 116, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+  /* line 117, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
   .signup-block .form-group input[type='text'], .signup-block .form-group input[type='email'], .signup-block .form-group input[type='password'] {
     width: 100%;
   }

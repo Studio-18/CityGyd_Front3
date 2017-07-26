@@ -8,7 +8,7 @@
         </div>
           <form class="" name="signupForm"  method="post" novalidate>
 
-        <div class="" ng-show="signup.formStep==2">
+        <div class="" ng-show="signup.formStep==1">
           <h1 class="title text-center"> Sign up to CityGyd</h1>
 
   <p class="error-message" ng-bind="signup.formisValid" ng-if="signup.formisValid"></p>
@@ -38,8 +38,8 @@
              <span class="" style="display: none">{{signup.formValid = signupForm.$valid}}</span>
 
              <div class="form-group">
-               <input required type="checkbox" name="checkterms" value="" ng-model="signup.terms">
-               <span for="terms" class="terms">I agree to CityGyd terms and conditions. </span>
+               <input required type="checkbox" id="terms" name="checkterms" value="" ng-model="signup.terms">
+               <label for="terms" class="terms">I agree to CityGyd terms and conditions. </label>
                  <br><br><br>
                  <span class="single-error-message" ng-if="signupForm.checkterms.$error.required">Please agree to terms and conditions.  </span>
 
@@ -54,7 +54,7 @@
 
 
         </div>
-            <div class="" ng-show="signup.formStep==1">
+            <div class="" ng-show="signup.formStep==2">
               <h1 class="title text-center"> Tell us more about yourself</h1>
               <div class="form-group">
                 <input type="text" name="fname" ng-model="signup.fname" class="form-control" placeholder="First name" ng-maxlength="300" required>

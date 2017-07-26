@@ -90,13 +90,14 @@ padding-top: 5px;
     input[type="checkbox"]{
 
     }
-    span{
+    span, label{
       &.terms{
         color: $gray-color;
         font-weight: 300;
         font-size: 18px;
         margin-left: 10px;
         display: inline-block;
+        cursor: pointer;
       }
     }
   }
