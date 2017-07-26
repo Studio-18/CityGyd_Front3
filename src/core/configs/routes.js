@@ -31,7 +31,26 @@
       templateUrl: 'views/main/gide/gide.html',
       controller: 'Gide.controller',
       controllerAs: 'gide'
-    }).state('app.test', {
+    })
+    .state('app.tour', {
+      url: '/tour/:id',
+      params: {
+        id: '',
+
+      },
+      resolve: {
+        // GIDE: function (gideService, $stateParams) {
+        //   return gideService.get($stateParams.gidename, null).then(function (res) {
+        //     console.log(res)
+        //     return res.data.data.gide
+        //   })
+        // }
+      },
+      templateUrl: 'views/main/tour/tour.html',
+      controller: 'Tour.controller',
+      controllerAs: 'tour'
+    })
+    .state('app.test', {
       url: '/test',
       templateUrl: '/templates/test.html',
       controller: 'testController',
