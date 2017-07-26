@@ -51,7 +51,7 @@ gulp.task('watch', ['browserSync', 'styles'], function () {
     // Watch image files
   gulp.watch('src/sassets/images/**/*', browserSync.reload);
     // Watch HTML files
-  gulp.watch('src/**/**/**/*.html', browserSync.reload);
+  gulp.watch('src/**/**/**/**/*.html', browserSync.reload);
 });
 
 

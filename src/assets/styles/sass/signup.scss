@@ -1,0 +1,126 @@
+.signup-block{
+  padding: 80px 0;
+  .title{
+    font-weight: 600;
+    color: $gray-color;
+    font-size: 40px;
+    padding: 20px;
+  }
+  .image-block{
+    img{
+      margin: 0 auto;
+    }
+  }
+  .form-group{
+    text-align: center;
+    input[type='text'], input[type='email'], input[type='password']{
+      width: 500px;
+      height: 60px;
+      text-align: center;
+      margin: 0 auto;
+      color: $gray-color;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    input[type='button']{
+      margin: 0 auto;
+      display: block;
+      color: $pure_white;
+      background-color: $theme_blue;
+      font-weight: 600;
+      font-size: 28px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      width: 250px;
+      height: 70px;
+
+
+
+    }
+    .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	// z-index: -1;
+  & + label{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    height: 60px;
+    padding: 14px;
+    cursor: pointer;
+    color: $gray-color;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '+';
+      left: 0px;
+      top: 0px;
+      background-color: #D7D7D7;
+      color: $pure_white;
+      font-weight: bold;
+      font-size: 40px;
+      height: 60px;
+      width: 60px;
+padding-top: 5px;
+
+
+    }
+  }
+}
+
+// .inputfile + label {
+//     font-size: 1.25em;
+//     font-weight: 700;
+//     color: white;
+//     background-color: black;
+//     display: inline-block;
+// }
+//
+// .inputfile:focus + label,
+// .inputfile + label:hover {
+//     background-color: red;
+// }
+
+    input[type="checkbox"]{
+
+    }
+    span{
+      &.terms{
+        color: $gray-color;
+        font-weight: 300;
+        font-size: 18px;
+        margin-left: 10px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:520px) {
+  .signup-block{
+    padding: 80px 0;
+    .title{
+    }
+    .image-block{
+      img{
+      }
+    }
+    .form-group{
+      input[type='text'], input[type='email'], input[type='password']{
+width: 100%;     }
+      input[type='button']{
+
+
+
+      }
+    }
+  }
+
+}

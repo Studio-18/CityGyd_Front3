@@ -58,3 +58,24 @@ select{
     margin-bottom: 20px;
   }
 }
+
+.single-error-message{
+  text-align: center;
+    display: block;
+    color: red;
+    font-weight: 500;
+    padding: 0px;
+    /* margin-bottom: 9px; */
+    margin-top: -29px;
+}
+.error-message{
+  color: red;
+    font-weight: 600;
+    font-size: 21px;
+    background: #ccc;
+    padding: 30px 10px;
+    border-left: 12px solid red;
+    width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
