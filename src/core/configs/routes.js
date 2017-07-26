@@ -88,6 +88,16 @@
       params: {
         referer: null
       },
+    }).state('app.signup', {
+       url: '/signup',
+      // abstract: true,
+      templateUrl: '/views/begin/signup/signup.html',
+      controller: 'signupController',
+      controllerAs: 'signup',
+      activeLink: 'signup',
+      params: {
+        referer: null
+      },
     });
     $locationProvider.html5Mode(false);
     $locationProvider.hashPrefix('');
