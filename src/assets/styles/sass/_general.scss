@@ -5,6 +5,16 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+input[type='button']{
+  &:focus, &:active{
+    outline: none;
+    border: 0;
+  }
+  &:active:focus{
+    border: 0;
+    outline: none;
+  }
+}
 .slick-slide {
   &:focus {
     outline: none;

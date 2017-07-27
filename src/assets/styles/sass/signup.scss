@@ -1,3 +1,4 @@
+.booking-container,
 .signup-block {
   padding: 80px 0;
 
@@ -17,9 +18,12 @@
   .form-group {
     text-align: center;
 
+    input[type='date'],
     input[type='email'],
     input[type='password'],
-    input[type='text'] {
+    input[type='text'],
+    select,
+    input[type='time'] {
       width: 500px;
       height: 60px;
       text-align: center;

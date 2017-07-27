@@ -47,11 +47,11 @@ gulp.task('watch', ['browserSync', 'styles'], function () {
     // Watch .scss files
   gulp.watch('src/assets/styles/sass/*.scss', ['styles']);
     // Watch .js files
-  gulp.watch('src/**/**/**/*.js', browserSync.reload);
+  gulp.watch('src/**/**/**/**/*.js', browserSync.reload);
     // Watch image files
   gulp.watch('src/sassets/images/**/*', browserSync.reload);
     // Watch HTML files
-  gulp.watch('src/**/**/**/**/*.html', browserSync.reload);
+  gulp.watch('src/**/**/**/**/**/*.html', browserSync.reload);
 });
 
 

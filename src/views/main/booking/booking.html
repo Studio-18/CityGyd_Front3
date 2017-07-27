@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="booking-container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h3 class="title text-center">Book your tour</h3>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="image-block">
+              <img src="{{booking.tourData.image.url}}" alt="{{booking.tourData.title}}" class="img img-responsive" />
+            </div>
+
+          </div>
+          <div class="col-sm-8">
+            <h1 class="tour-name">{{booking.tourData.title}}</h1>
+            <p class="tour-desc">
+              {{ booking.tourData.description | limitTo: 300}}
+            </p>
+            <p class="tour-desc">
+              Contact Gyd at (Gide Number)
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <form class="" method="post">
+          <div class="form-group">
+            <input type="text" name="meetaddress" g-places-autocomplete ng-model="booking.meetaddress" value="" class="form-control" placeholder="Where will we meet?">
+
+          </div>
+          <div class="form-group">
+            <datepicker date-format='MMM dd, yyyy' date-min-limit="{{booking.currentDate}}">
+              <input type="text" name="date" value="" ng-model="booking.bookingdate" value="" class="form-control" placeholder="Meeting  date">
+
+            </datepicker>
+            <!-- <input type="date" name="date" value="" ng-model="booking.bookingdate" value="" class="form-control" placeholder="Meeting  date"> -->
+
+          </div>
+          <div class="form-group">
+            <input type="time" name="time" value="" ng-model="booking.bookingtime" value="" class="form-control" placeholder="Meeting time">
+ <div ez-timepicker="time"></div>
+            <!-- <input  ez-timepicker="form.time" data-clock-icon-class="fa fa-clock-o" data-inc-icon-class="fa fa-chevron-up" data-dec-icon-class="fa fa-chevron-down"/> -->
+
+          </div>
+
+          <div class="form-group">
+
+            <select class="form-control" name="hours" ng-model="booking.bookinghours" ng-options="hours as hours for hours in booking.numberofhours">
+                 <option value='' disabled>Tour duration in hours</option>
+                  <!-- <option  ng-repeat="hours in booking.numberofhours" ng-value="{{hours}}">{{hours}}</option> -->
+
+              </select>
+            <!-- <input type="text" name="hours" value="" ng-model="booking.bookinghours" value="" class="form-control" placeholder="Total duration hours"> -->
+
+          </div>
+          <div class="form-group">
+            <p class="booking-price" ng-if="booking.bookinghours">
+              Total Tour Price: ${{booking.tourData.price * booking.bookinghours}}
+            </p>
+            <p class="booking-price" ng-if="!booking.bookinghours">
+              Total Tour Price: $0
+            </p>
+
+          </div>
+
+          <div class="form-group">
+            <input type="button" name="submit" value="Book your tour" class="btn btn-default">
+
+          </div>
+
+
+
+
+        </form>
+
+        </>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

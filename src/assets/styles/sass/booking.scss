@@ -1,0 +1,38 @@
+.booking-container{
+  padding: 20px 0;
+  .tour-name{
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0px;
+    margin: 0;
+  }
+  .tour-desc{
+    color: $gray-color;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .booking-price{
+    text-align: left;
+    color: $pure_black;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  form{
+    margin: 50px 0;
+  }
+  .form-group{
+    input[type='text'], input[type='date'], input[type='time'],select{
+      width: 100%;
+    }
+    select{
+      height: 60px;
+      text-align-last:  center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      &::-ms-expand{
+        display: none;
+      }
+    }
+  }
+}

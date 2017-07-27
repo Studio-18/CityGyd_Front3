@@ -31,12 +31,10 @@
       templateUrl: 'views/main/gide/gide.html',
       controller: 'Gide.controller',
       controllerAs: 'gide'
-    })
-    .state('app.tour', {
+    }).state('app.tour', {
       url: '/tour/:id',
       params: {
         id: '',
-
       },
       resolve: {
         // GIDE: function (gideService, $stateParams) {
@@ -49,8 +47,7 @@
       templateUrl: 'views/main/tour/tour.html',
       controller: 'Tour.controller',
       controllerAs: 'tour'
-    })
-    .state('app.test', {
+    }).state('app.test', {
       url: '/test',
       templateUrl: '/templates/test.html',
       controller: 'testController',
@@ -64,12 +61,11 @@
       templateUrl: 'views/main/viewtourgide/tourgide.html',
       controller: 'tourgideController',
       controllerAs: 'tourgide',
-
       params: {
         referer: null
       },
     }).state('app.tourgide.tours', {
-       url: '/tours',
+      url: '/tours',
       // abstract: true,
       templateUrl: '/views/main/viewtourgide/tour.html',
       controller: 'tourgideController',
@@ -79,7 +75,7 @@
         referer: null
       },
     }).state('app.tourgide.gides', {
-       url: '/gides',
+      url: '/gides',
       // abstract: true,
       templateUrl: '/views/main/viewtourgide/gide.html',
       controller: 'tourgideController',
@@ -89,7 +85,7 @@
         referer: null
       },
     }).state('app.signup', {
-       url: '/signup',
+      url: '/signup',
       // abstract: true,
       templateUrl: '/views/begin/signup/signup.html',
       controller: 'signupController',
@@ -99,7 +95,7 @@
         referer: null
       },
     }).state('app.login', {
-       url: '/login',
+      url: '/login',
       // abstract: true,
       templateUrl: '/views/begin/login/login.html',
       controller: 'loginController',
@@ -108,6 +104,16 @@
       params: {
         referer: null
       },
+    }).state('app.booking', {
+      url: '/booking/:id',
+      params: {
+        id: '',
+      },
+      resolve: {
+      },
+      templateUrl: 'views/main/booking/booking.html',
+      controller: 'Booking.controller',
+      controllerAs: 'booking'
     });
     $locationProvider.html5Mode(false);
     $locationProvider.hashPrefix('');
