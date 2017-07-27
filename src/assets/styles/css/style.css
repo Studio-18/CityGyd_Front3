@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 1, /var/www/html/cityGydNewDesign/src/assets/styles/sass/_general.scss */
 body {
   overflow-x: hidden;
@@ -478,7 +479,7 @@ select.filter-result {
   padding: 80px 0;
 }
 
-/* line 3, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 4, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .title {
   font-weight: 600;
   color: #858080;
@@ -486,18 +487,24 @@ select.filter-result {
   padding: 20px;
 }
 
-/* line 10, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 12, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .image-block img {
   margin: 0 auto;
 }
 
-/* line 14, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 17, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .form-group {
   text-align: center;
+  /* Base for label styling */
+  /* checkbox aspect */
+  /* checked mark aspect */
+  /* checked mark aspect changes */
 }
 
-/* line 16, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
-.signup-block .form-group input[type='text'], .signup-block .form-group input[type='email'], .signup-block .form-group input[type='password'] {
+/* line 20, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group input[type='email'],
+.signup-block .form-group input[type='password'],
+.signup-block .form-group input[type='text'] {
   width: 500px;
   height: 60px;
   text-align: center;
@@ -507,7 +514,7 @@ select.filter-result {
   margin-bottom: 40px;
 }
 
-/* line 25, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 32, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .form-group input[type='button'] {
   margin: 0 auto;
   display: block;
@@ -521,7 +528,7 @@ select.filter-result {
   height: 70px;
 }
 
-/* line 40, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 45, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .form-group .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -530,7 +537,7 @@ select.filter-result {
   position: absolute;
 }
 
-/* line 47, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 52, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .form-group .inputfile + label {
   width: 500px;
   text-align: center;
@@ -545,12 +552,12 @@ select.filter-result {
   position: relative;
 }
 
-/* line 59, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+/* line 65, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
 .signup-block .form-group .inputfile + label:before {
   position: absolute;
   content: '+';
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   background-color: #D7D7D7;
   color: #fff;
   font-weight: bold;
@@ -560,8 +567,66 @@ select.filter-result {
   padding-top: 5px;
 }
 
-/* line 94, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
-.signup-block .form-group span.terms, .signup-block .form-group label.terms {
+/* line 93, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group [type="checkbox"]:checked,
+.signup-block .form-group [type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 99, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group [type="checkbox"]:checked + label,
+.signup-block .form-group [type="checkbox"]:not(:checked) + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* line 106, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group [type="checkbox"]:checked + label:before,
+.signup-block .form-group [type="checkbox"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 120, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group [type="checkbox"]:checked + label:after,
+.signup-block .form-group [type="checkbox"]:not(:checked) + label:after {
+  content: '✔';
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #858080;
+  transition: all 0.2s;
+}
+
+/* line 132, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+/* line 137, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/* line 144, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+.signup-block .form-group label.terms,
+.signup-block .form-group span.terms {
   color: #858080;
   font-weight: 300;
   font-size: 18px;
@@ -571,12 +636,14 @@ select.filter-result {
 }
 
 @media screen and (max-width: 520px) {
-  /* line 108, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+  /* line 156, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
   .signup-block {
     padding: 80px 0;
   }
-  /* line 117, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
-  .signup-block .form-group input[type='text'], .signup-block .form-group input[type='email'], .signup-block .form-group input[type='password'] {
+  /* line 166, /var/www/html/cityGydNewDesign/src/assets/styles/sass/signup.scss */
+  .signup-block .form-group input[type='email'],
+  .signup-block .form-group input[type='password'],
+  .signup-block .form-group input[type='text'] {
     width: 100%;
   }
 }

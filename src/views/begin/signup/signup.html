@@ -6,24 +6,24 @@
           <img src="../../../assets/images/CityGyd_logo.png" alt="CityGyd" class="img img-responsive" />
 
         </div>
-          <form class="" name="signupForm"  method="post" novalidate>
+
 
         <div class="" ng-show="signup.formStep==1">
           <h1 class="title text-center"> Sign up to CityGyd</h1>
-
+  <form class="" name="signupForm"  method="post" novalidate>
   <p class="error-message" ng-bind="signup.formisValid" ng-if="signup.formisValid"></p>
 
 
              <div class="form-group">
                <input type="email" name="email" ng-model="signup.email" class="form-control" placeholder="email" ng-maxlength="300" required>
-               <span class="single-error-message" ng-show="signupForm.email.$touched && signupForm.email.$error.required">Email  is required.</span>
+               <span class="single-error-message" ng-show="!signupForm.email.$pristine && signupForm.email.$error.required">Email  is required.</span>
                           <span class="single-error-message" ng-if="signupForm.email.$error.maxlength">Email should be less 300 characters. </span>
                             <span class="single-error-message" ng-if="signupForm.email.$error.email">Not a valid email! </span>
              </div>
              <div class="form-group">
                <input type="password" name="password" ng-model="signup.password" class="form-control" placeholder="password" ng-maxlength="100" ng-minlength="8" required>
 
-               <span class="single-error-message" ng-show="signupForm.password.$touched && signupForm.password.$error.required">Password  is required.</span>
+               <span class="single-error-message" ng-show="!signupForm.password.$pristine && signupForm.password.$error.required">Password  is required.</span>
                           <span class="single-error-message" ng-if="signupForm.password.$error.maxlength">Password should be less 100 characters. </span>
                               <span class="single-error-message" ng-if="signupForm.password.$error.minlength">Password should be more 7 characters. </span>
 
@@ -31,17 +31,18 @@
              </div>
              <div class="form-group">
                <input type="password" name="cnfmpassword" ng-model="signup.cnfmpassword" class="form-control" placeholder="Confirm Password" ng-maxlength="100" ng-minlength="7" required>
-                  <span class="single-error-message" ng-show="signupForm.cnfmpassword.$touched && signupForm.cnfmpassword.$error.required">Confirm Password  is required.</span>
+               <span class="single-error-message" ng-show="!signupForm.cnfmpassword.$pristine && signup.comparepassword">Passwords do not match.</span>
+                  <span class="single-error-message" ng-show="!signupForm.cnfmpassword.$pristine && signupForm.cnfmpassword.$error.required">Confirm Password  is required.</span>
                <span class="single-error-message" ng-if="signupForm.cnfmpassword.$error.maxlength">Confirm Password should be less 100 characters. </span>
                    <span class="single-error-message" ng-if="signupForm.cnfmpassword.$error.minlength">Confirm Password should be more 7 characters. </span>
              </div>
              <span class="" style="display: none">{{signup.formValid = signupForm.$valid}}</span>
 
              <div class="form-group">
-               <input required type="checkbox" id="terms" name="checkterms" value="" ng-model="signup.terms">
+               <input required type="checkbox" id="terms" name="checkterms"  ng-model="signup.terms">
                <label for="terms" class="terms">I agree to CityGyd terms and conditions. </label>
                  <br><br><br>
-                 <span class="single-error-message" ng-if="signupForm.checkterms.$error.required">Please agree to terms and conditions.  </span>
+                 <span class="single-error-message" ng-if="!signup.checkboxChecked">Please agree to terms and conditions.  </span>
 
 
              </div>
@@ -52,30 +53,35 @@
              </div>
 
 
-
+  </form>
         </div>
             <div class="" ng-show="signup.formStep==2">
+                <form class="" name="signupForm_sec"  method="post" novalidate>
               <h1 class="title text-center"> Tell us more about yourself</h1>
+                <p class="error-message" ng-bind="signup.formisValiderror" ng-if="signup.formisValiderror"></p>
               <div class="form-group">
                 <input type="text" name="fname" ng-model="signup.fname" class="form-control" placeholder="First name" ng-maxlength="300" required>
-                <span class="single-error-message" ng-show="signupForm.fname.$touched && signupForm.fname.$error.required">First Name   is required.</span>
-                           <span class="single-error-message" ng-if="signupForm.fname.$error.maxlength">First Name  should be less 300 characters. </span>
+                <span class="single-error-message" ng-show="!signupForm_sec.fname.$pristine && signupForm_sec.fname.$error.required">First Name   is required.</span>
+                           <span class="single-error-message" ng-if="signupForm_sec.fname.$error.maxlength">First Name  should be less 300 characters. </span>
 
               </div>
               <div class="form-group">
                 <input type="text" name="lname" ng-model="signup.lname" class="form-control" placeholder="Last name" ng-maxlength="100" ng-minlength="8" required>
 
-                <span class="single-error-message" ng-show="signupForm.lname.$touched && signupForm.lname.$error.required">Last Name   is required.</span>
-                           <span class="single-error-message" ng-if="signupForm.lname.$error.maxlength">Last name should be less 100 characters. </span>
-                               <span class="single-error-message" ng-if="signupForm.lname.$error.minlength">Last Name  should be more 7 characters. </span>
+                <span class="single-error-message" ng-show="!signupForm_sec.lname.$pristine && signupForm_sec.lname.$error.required">Last Name   is required.</span>
+                           <span class="single-error-message" ng-if="signupForm_sec.lname.$error.maxlength">Last name should be less 100 characters. </span>
+                               <span class="single-error-message" ng-if="signupForm_sec.lname.$error.minlength">Last Name  should be more 7 characters. </span>
 
 
               </div>
               <div class="form-group">
-                <input type="text" name="phone" ng-model="signup.phone" class="form-control" placeholder="Cell Phone number" ng-maxlength="12" ng-minlength="7" required>
-                   <span class="single-error-message" ng-show="signupForm.phone.$touched && signupForm.phone.$error.required">Phone  is required.</span>
-                <span class="single-error-message" ng-if="signupForm.phone.$error.maxlength">Phone should be less 12 characters. </span>
-                    <span class="single-error-message" ng-if="signupForm.phone.$error.minlength">Phone should be more 7 characters. </span>
+                <input type="text" name="phone" ng-model="signup.phone" class="form-control" placeholder="Cell Phone number" ng-maxlength="12" ng-minlength="7"  ng-pattern="/^\d+$/" required>
+
+                <span class="single-error-message" ng-show="!signupForm_sec.phone.$pristine && signupForm_sec.phone.$error.pattern">Not a valid number</span>
+
+                   <span class="single-error-message" ng-show="!signupForm_sec.phone.$pristine && signupForm_sec.phone.$error.required">Phone  is required.</span>
+                <span class="single-error-message" ng-if="signupForm_sec.phone.$error.maxlength">Phone should be less 12 characters. </span>
+                    <span class="single-error-message" ng-if="signupForm_sec.phone.$error.minlength">Phone should be more 7 characters. </span>
               </div>
 
               <div class="form-group">
@@ -85,15 +91,16 @@
 
 
               </div>
+                 <span class="" style="display: none">{{signup.formValid_sec = signupForm_sec.$valid}}</span>
 
               <div class="form-group">
                 <input type="button" id="terms" ng-click="signup.updatebasic()" name="update" value="Next" class="btn btn-default">
 
               </div>
 
-
+</form>
             </div>
-  </form>
+
 
 
       </div>
