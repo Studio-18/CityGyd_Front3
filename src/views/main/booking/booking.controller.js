@@ -16,6 +16,7 @@
     loaderService.hideLoader();
 
     vm.isOpen = false;
+    vm.isDateOpen = false;
 
   vm.openCalendar = function(e) {
       e.preventDefault();
@@ -23,6 +24,12 @@
 
       vm.isOpen = true;
   };
+  vm.openDateCalendar = function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    vm.isDateOpen = true;
+  }
 
     vm.tourData = function (id) {
         tourService.get(id).then(function (response) {
