@@ -98,6 +98,16 @@
       params: {
         referer: null
       },
+    }).state('app.login', {
+       url: '/login',
+      // abstract: true,
+      templateUrl: '/views/begin/login/login.html',
+      controller: 'loginController',
+      controllerAs: 'login',
+      activeLink: 'login',
+      params: {
+        referer: null
+      },
     });
     $locationProvider.html5Mode(false);
     $locationProvider.hashPrefix('');
