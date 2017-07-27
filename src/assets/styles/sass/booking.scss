@@ -22,6 +22,10 @@
     margin: 50px 0;
   }
   .form-group{
+    &.time-picker{
+
+      position: relative;
+    }
     input[type='text'], input[type='date'], input[type='time'],select{
       width: 100%;
     }
@@ -34,5 +38,11 @@
         display: none;
       }
     }
+  }
+}
+.uib-time{
+  width: 60%;
+  &.am-pm{
+    padding: 10px 20px 50px 10px;
   }
 }

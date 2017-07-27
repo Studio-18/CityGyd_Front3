@@ -724,11 +724,16 @@ select.filter-result {
 }
 
 /* line 25, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
+.booking-container .form-group.time-picker {
+  position: relative;
+}
+
+/* line 29, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
 .booking-container .form-group input[type='text'], .booking-container .form-group input[type='date'], .booking-container .form-group input[type='time'], .booking-container .form-group select {
   width: 100%;
 }
 
-/* line 28, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
+/* line 32, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
 .booking-container .form-group select {
   height: 60px;
   text-align-last: center;
@@ -736,9 +741,19 @@ select.filter-result {
   -moz-appearance: none;
 }
 
-/* line 33, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
+/* line 37, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
 .booking-container .form-group select::-ms-expand {
   display: none;
+}
+
+/* line 43, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
+.uib-time {
+  width: 60%;
+}
+
+/* line 45, /var/www/html/cityGydNewDesign/src/assets/styles/sass/booking.scss */
+.uib-time.am-pm {
+  padding: 10px 20px 50px 10px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

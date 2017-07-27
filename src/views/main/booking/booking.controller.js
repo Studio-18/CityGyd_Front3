@@ -14,6 +14,16 @@
     console.log("Id", vm.id);
     loaderService.showLoader();
     loaderService.hideLoader();
+
+    vm.isOpen = false;
+
+  vm.openCalendar = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      vm.isOpen = true;
+  };
+
     vm.tourData = function (id) {
         tourService.get(id).then(function (response) {
           vm.tourData = response.data.data.tour;
