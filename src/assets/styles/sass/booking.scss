@@ -46,3 +46,16 @@
     padding: 10px 20px 50px 10px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .booking-container{
+    .tour-name{
+      text-align: center;
+    }
+    .tour-desc{
+      text-align: center;
+    }
+
+  }
+
+}

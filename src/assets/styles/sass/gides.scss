@@ -1,35 +1,38 @@
-.gide-details{
+.gide-details {
   padding: 50px 0;
-  .image-block{
-    img{
-      &.img-circle{
+
+  .image-block {
+    img {
+      &.img-circle {
         height: 140px;
         width: 140px;
       }
     }
   }
-  .book-tour-title{
+
+  .book-tour-title {
     font-weight: 600;
     font-size: 30px;
     padding: 10px 0;
     color: $gray-color;
-
   }
 
-.contact-btn-block{
-  height: 220px;
-  .contact{
-    &.btn{
-      margin: 0;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
+  .contact-btn-block {
+    height: 220px;
+
+    .contact {
+      &.btn {
+        margin: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
-}
+
   .contact {
-    &.btn{
-      background-color:  $theme_blue;
+    &.btn {
+      background-color: $theme_blue;
       color: $pure_white;
       text-transform: capitalize;
       border-radius: 8px;
@@ -38,32 +41,30 @@
       font-size: 23px;
       font-weight: bold;
       padding: 20px 13px;
-      margin: 40px 0px;
+      margin: 40px 0;
       display: block;
       text-align: center;
-
     }
-
   }
-  .gide-name{
+
+  .gide-name {
     color: $gray-color;
     text-align: left;
     font-weight: 600;
     font-size: 42px;
     text-transform: capitalize;
-
-
   }
-  .gide-desc{
+
+  .gide-desc {
     color: $pure_black;
     font-size: 20px;
     line-height: 35px;
     display: block;
     padding: 20px 0;
-
   }
-  .gide-info{
-    span{
+
+  .gide-info {
+    span {
       display: block;
       color: $gray-color;
       font-size: 20px;
@@ -71,34 +72,35 @@
       line-height: 35px;
     }
   }
-
-
 }
 
-.tours{
+.tours {
   padding: 30px 0;
-  .tour-title{
+
+  .tour-title {
     color: $gray-color;
     font-weight: 600;
     font-size: 24px;
   }
-  .tour-details{
+
+  .tour-details {
     padding: 30px 0;
     min-height: 200px;
   }
-  .tour-name{
+
+  .tour-name {
     font-weight: bold;
     font-size: 24px;
     color: $pure_black;
-
   }
-  .tour-desc{
+
+  .tour-desc {
     color: $gray-color;
     font-size: 20px;
-
   }
+
   .btn {
-    &.learn-more{
+    &.learn-more {
       border: none;
       color: $pure_white;
       background-color: $theme_blue;
@@ -112,75 +114,81 @@
       margin-top: 30px;
     }
   }
-  .price{
+
+  .price {
     color: $gray-color;
     font-weight: bold;
     font-size: 20px;
   }
 }
-
 @media (max-width: 768px) {
-
-  .gide-details{
+  .gide-details {
     text-align: center;
-    .image-block{
-      img{
+
+    .image-block {
+      img {
         display: block;
         margin: 30px auto;
-
-      }
-    }
-    .contact {
-      &.btn{
-        text-align: center;
-        display: block;
-        margin: 30px auto;
-
-      }
-
-    }
-    .gide-name{
-text-align: center;
-    }
-    .gide-desc{
-
-    }
-    .gide-info{
-      span{
       }
     }
 
+    .contact-btn-block {
+      .contact {
+        &.btn {
+          text-align: center;
+          display: block;
+          margin: 30px auto;
+        }
+      }
 
+      .contact {
+        &.btn {
+          text-align: center;
+          display: block;
+          margin: 30px auto;
+        }
+      }
+    }
+
+    .gide-name {
+      text-align: center;
+    }
+
+    .gide-desc {}
+
+    .gide-info {
+      span {}
+    }
   }
 
-  .tours{
+  .tours {
     text-align: center;
-    .tour-title{
-    }
-    .image-block{
+
+    .tour-title {}
+
+    .image-block {
       text-align: center;
       margin: 0 auto;
-      img{
-        margin: 0 auto;
 
+      img {
+        margin: 0 auto;
       }
     }
-    .tour-details{
-    }
-    .tour-name{
 
-    }
-    .tour-desc{
+    .tour-details {}
 
-    }
+    .tour-name {}
+
+    .tour-desc {}
+
     .btn {
-      &.learn-more{
+      &.learn-more {
         text-align: center;
         display: block;
         margin: 0 auto;
       }
     }
-    .price{
-    }
+
+    .price {}
   }
 }

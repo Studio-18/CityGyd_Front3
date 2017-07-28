@@ -8,15 +8,20 @@
     vm.formisValid = "";
     vm.formValid = false;
     vm.formData = {
-      email: '',
-      password: ''
+      email: 'pmcochrane@gmail.com',
+      password: 'studio18'
     };
     vm.error = '';
-    vm.email = '';
-    vm.password = '';
     vm.authenticate = function () {
-      loginService.authenticate().then(function (response) {
-        if (response) {}
+           loaderService.showLoader();
+      loginService.authenticate(vm.formData).then(function (response) {
+        console.log("response recd", response);
+        //                loaderService.hideLoader();
+        if (response) {
+          console.log("response recd", response);
+          loaderService.hideLoader();
+          $state.go('app.explore-tours');
+        }
       }).catch(function (error) {
         vm.error = " Unable to process because of " + error;
       });
