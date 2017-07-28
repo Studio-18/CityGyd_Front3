@@ -2,11 +2,13 @@
   'use strict'
   //TODO:
   var ExploreController;
-  ExploreController.$inject = ['$state', '$scope', '$http', 'exploreService', 'LANGUAGE', 'loaderService', 'languagereadService', 'CATEGORY', 'expertiseNameService'];
+  ExploreController.$inject = ['$state', '$scope', '$http', 'exploreService', 'LANGUAGE', 'loaderService', 'languagereadService', 'CATEGORY', 'expertiseNameService', '$translate'];
 
-  function ExploreController($state, $scope, $http, exploreService, LANGUAGE, loaderService, languagereadService, CATEGORY, expertiseNameService) {
+  function ExploreController($state, $scope, $http, exploreService, LANGUAGE, loaderService, languagereadService, CATEGORY, expertiseNameService, $translate) {
     var vm = this;
     vm.tourData = {};
+    console.log($translate.use('en'));
+        $translate.use('zh');
     vm.gideData = {};
     loaderService.showLoader();
     vm.getTours = function () {
@@ -20,6 +22,7 @@
             var sentence = languagereadService.getLanguageName(LANGUAGE, vm.tourData[i].language);
             vm.tourData[i].language = sentence;
           }
+                  $translate.use('ko');
           loaderService.hideLoader();
           $scope.slickConfig = {
             enabled: true,

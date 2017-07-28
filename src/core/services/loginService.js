@@ -25,9 +25,13 @@
 
 
     };
+    var  isLoggedIn = function() {
+      return (tokenService.retrieve() != null);
+    }
 
     var service = {
-      authenticate: authenticate
+      authenticate: authenticate,
+      isLoggedIn: isLoggedIn
     }
     return service;
   }

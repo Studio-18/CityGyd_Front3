@@ -15,7 +15,7 @@
     };
     var service = {
       storeToken: storeToken,
-      reretrieve: retrieve
+      retrieve: retrieve
     }
     return service;
   }

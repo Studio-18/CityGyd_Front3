@@ -28,5 +28,8 @@
     "angularjs-datepicker": "^2.1.23",
     "angular-google-places-autocomplete": "^0.2.7",
     "bootstrap-ui-datetime-picker": "^2.6.0"
+  },
+  "devDependencies": {
+    "angular-translate": "^2.15.2"
   }
 }
