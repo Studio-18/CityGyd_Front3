@@ -2,7 +2,6 @@
   gideCard.$inject = ['CATEGORIES', 'LANGUAGE'];
 
   function gideCard(CATEGORIES, LANGUAGE) {
-    console.log("tours");
     return {
       templateUrl: 'core/directives/gideCards/gideCard.html',
       scope: {

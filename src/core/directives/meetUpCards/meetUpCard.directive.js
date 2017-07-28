@@ -2,7 +2,6 @@
   meetupCard.$inject = ['CATEGORIES', 'LANGUAGE'];
 
   function meetupCard(CATEGORIES, LANGUAGE) {
-    console.log("tours");
     return {
       templateUrl: 'core/directives/meetUpCards/meetUpCard.html',
       scope: {

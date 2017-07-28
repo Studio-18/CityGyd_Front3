@@ -13,7 +13,7 @@
     }
 
     function showLoader () {
-      console.log("yes showloader calle. ");
+    
       $rootScope.$broadcast('loaderShow');
     }
     return exports;

@@ -8,50 +8,36 @@
     var vm = this;
     vm.id = $stateParams.id ? $stateParams.id : null;
     vm.bookingPrice = 0;
-    vm.bookinghours='';
+    vm.bookinghours = '';
     vm.numberofhours = [];
     vm.currentDate = new Date().toDateString();
-    console.log("Id", vm.id);
     loaderService.showLoader();
     loaderService.hideLoader();
-
     vm.isOpen = false;
     vm.isDateOpen = false;
-
-  vm.openCalendar = function(e) {
+    vm.openCalendar = function (e) {
       e.preventDefault();
       e.stopPropagation();
-
       vm.isOpen = true;
-  };
-  vm.openDateCalendar = function(e){
-    e.preventDefault();
-    e.stopPropagation();
-
-    vm.isDateOpen = true;
-  }
-
+    };
+    vm.openDateCalendar = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      vm.isDateOpen = true;
+    }
     vm.tourData = function (id) {
-        tourService.get(id).then(function (response) {
-          vm.tourData = response.data.data.tour;
-        }).catch(function (error) {
-          console.log("error found...", error);
-        });
-
+      tourService.get(id).then(function (response) {
+        vm.tourData = response.data.data.tour;
+      }).catch(function (error) {});
     };
-    var initNumbofHours = function(){
+    var initNumbofHours = function () {
       for (var i = 1; i < 9; i++) {
-
         vm.numberofhours.push(i);
-        console.log(vm.numberofhours);
-
       }
-
     };
-
     var init = function () {
-        vm.tourData(vm.id);
-        initNumbofHours();
+      vm.tourData(vm.id);
+      initNumbofHours();
     };
     init();
   }

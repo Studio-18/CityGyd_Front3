@@ -2,7 +2,6 @@
   navView.$inject = ['CATEGORIES', 'LANGUAGE'];
 
   function navView(CATEGORIES, LANGUAGE) {
-    console.log("tours");
     return {
       templateUrl: 'core/directives/nav/nav.html',
       scope: {

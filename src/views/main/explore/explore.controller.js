@@ -72,7 +72,7 @@
             vm.gideData[i].languages = sentence;
            var expertise = expertiseNameService.getExpertiseName(CATEGORY, vm.gideData[i].expertise);
            vm.gideData[i].expertise = expertise;
-           console.log("final expertise list", vm.gideData[i].expertise);
+
           }
         }
       });
